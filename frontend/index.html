@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Joshua Kitchen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+
+        <header>
+            <h1>Joshua Kitchen</h1>
+            <p>
+                Houston, TX · 979-661-1979 ·
+                <a href="mailto:joshlkit@gmail.com">joshlkit@gmail.com</a> ·
+                <a href="https://www.linkedin.com/in/joshua-k-a75759182" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+            </p>
+        </header>
+        <p><strong>Visitors:</strong> <span id="counter">Loading...</span></p>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>
+                Cloud security-focused analyst with experience in Azure environments, vulnerability management,
+                SIEM monitoring, and defensive security operations. Hands-on with Microsoft Sentinel, Defender
+                for Endpoint, Entra ID, and Azure infrastructure, with a growing focus on cloud security
+                engineering, automation, and detection.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Cloud Platforms:</strong> Microsoft Azure, AWS (foundational)</li>
+                <li><strong>Security Tools:</strong> Microsoft Sentinel, Defender for Endpoint, Tenable.io, Entra ID
+                </li>
+                <li><strong>Security Domains:</strong> Vulnerability Management, Security Monitoring, Risk Assessment,
+                    Identity & Access Management, Cloud Security</li>
+                <li><strong>Languages & Scripting:</strong> Python, PowerShell, Bash, KQL</li>
+                <li><strong>Infrastructure & Systems:</strong> Azure VMs, Network Security Groups, Firewall Rules,
+                    Linux, Windows</li>
+                <li><strong>Frameworks & Standards:</strong> NIST 800-37, NIST 800-53, NIST 800-61, NIST CSF, PCI-DSS,
+                    HIPAA, GDPR, OWASP Top 10</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Professional Experience</h2>
+
+            <article>
+                <h3>Cloud Consultant / Technical Analyst</h3>
+                <p><strong>Valorem Reply</strong> · May 2022 – December 2024</p>
+                <ul>
+                    <li>Implemented Azure cloud security best practices including RBAC configuration, identity
+                        governance, and access control improvements.</li>
+                    <li>Conducted security audits and risk assessments to identify misconfigurations, reduce attack
+                        surface, and strengthen governance controls.</li>
+                    <li>Performed security monitoring and incident response using Microsoft Sentinel, Defender for
+                        Endpoint, and Entra ID.</li>
+                    <li>Supported compliance initiatives aligned with PCI-DSS, HIPAA, and GDPR requirements.</li>
+                    <li>Collaborated with engineering teams to improve overall cloud security posture across Azure
+                        environments.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Associate Banker</h3>
+                <p><strong>JPMorgan Chase</strong> · July 2021 – May 2022</p>
+                <ul>
+                    <li>Applied KYC and AML compliance procedures in accordance with FFIEC and FINRA guidance.</li>
+                    <li>Monitored transactions for fraud indicators and escalated suspicious activity for investigation.
+                    </li>
+                    <li>Developed strong risk awareness and control-focused decision-making skills applicable to
+                        cybersecurity and GRC roles.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Technical Projects</h2>
+
+            <article>
+                <h3>Azure Cloud Resume Project</h3>
+                <ul>
+                    <li>Built and deployed a cloud-hosted resume site using Azure Storage and static website hosting.
+                    </li>
+                    <li>Developed a serverless backend API using Azure Functions (Python) to power a visitor counter.
+                    </li>
+                    <li>Integrated frontend and backend components using JavaScript and HTTP-based API communication.
+                    </li>
+                    <li>Applied cloud architecture principles including separation of concerns, scalability, and secure
+                        design patterns.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Cloud Security & Detection Lab</h3>
+                <p><strong>Tools:</strong> Tenable.io, Microsoft Sentinel, Defender for Endpoint, Azure VMs, KQL</p>
+                <ul>
+                    <li>Performed vulnerability scans and prioritized remediation using CVSS scoring and risk-based
+                        analysis.</li>
+                    <li>Developed KQL queries in Microsoft Sentinel to detect anomalous sign-in activity and suspicious
+                        behavior.</li>
+                    <li>Investigated Defender for Endpoint alerts and mapped findings to MITRE ATT&amp;CK techniques.
+                    </li>
+                    <li>Configured Azure virtual machines and network security groups to simulate attack and defense
+                        scenarios.</li>
+                </ul>
+            </article>
+
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <ul>
+                <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
+                <li>Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)</li>
+                <li>CompTIA A+</li>
+                <li>CompTIA Network+</li>
+                <li>CompTIA Security+</li>
+                <li>CompTIA CySA+</li>
+                <li>CompTIA PenTest+ (in progress)</li>
+                <li>Certificate of Cloud Security Knowledge (CCSK)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <p>
+                <strong>Western Governors University</strong><br />
+                Bachelor of Science in Cybersecurity and Information Assurance<br />
+                Expected Graduation: June 2026
+            </p>
+        </section>
+    </main>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("https://jkcloud-visits-func-fcbzgag3b9btd0fr.westus-01.azurewebsites.net/api/visits")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("counter").innerText = data.count;
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById("counter").innerText = "Unavailable";
+    });
+});
+</script>
+</body>
+
