@@ -1,0 +1,175 @@
+/* style.css */
+
+:root {
+  --bg: #0b1120;
+  --panel: #111827;
+  --panel-2: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #60a5fa;
+  --accent-hover: #93c5fd;
+  --border: #243041;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  --max-width: 920px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 32px 20px 56px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+  background: linear-gradient(180deg, #0b1120 0%, #111827 100%);
+  color: var(--text);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+header {
+  max-width: var(--max-width);
+  margin: 0 auto 24px;
+  padding: 32px;
+  background: rgba(17, 24, 39, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 2.4rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+section {
+  max-width: var(--max-width);
+  margin: 0 auto 20px;
+  padding: 26px 28px;
+  background: rgba(17, 24, 39, 0.88);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 10px;
+}
+
+h3 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  color: #f3f4f6;
+}
+
+article+article {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+ul {
+  margin: 10px 0 0 0;
+  padding-left: 20px;
+}
+
+li+li {
+  margin-top: 8px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+strong {
+  color: #f9fafb;
+}
+
+header a {
+  font-weight: 600;
+}
+
+section p,
+section li {
+  color: #d1d5db;
+}
+
+section>p:last-child,
+article>p:last-child {
+  margin-bottom: 0;
+}
+
+/* Subtle skills polish */
+section ul li strong {
+  color: #ffffff;
+}
+
+/* Make certifications and skills lists breathe a bit */
+section ul {
+  list-style: disc;
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  body {
+    padding: 18px 12px 32px;
+  }
+
+  header,
+  section {
+    padding: 20px 18px;
+    border-radius: 14px;
+  }
+
+  header h1 {
+    font-size: 1.9rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
